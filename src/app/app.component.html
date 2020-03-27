@@ -1,16 +1,10 @@
-<div class="card-container">
-  <div class="card-image">
-    <figure>
-      <img src="assets/tree.jpeg" alt="Tree" />
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media-content">
-      <h4>Tree in Nature</h4>
-      <p>@nature</p>
-    </div>
-    <div class="content">
-      <p>Lorem ipsum dolor sit amet</p>
-    </div>
-  </div>
+<div class="cards">
+  <app-card
+    *ngFor="let post of posts"
+    [title]="post.title"
+    [imageUrl]="post.imageUrl"
+    [username]="post.username"
+    [content]="post.content"
+  >
+  </app-card>
 </div>
